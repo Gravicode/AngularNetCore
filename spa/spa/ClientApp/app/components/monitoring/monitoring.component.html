@@ -1,0 +1,26 @@
+<h1>Sensor Data</h1>
+
+<p>This component will call rest api.</p>
+
+<p *ngIf="!datas"><em>Loading...</em></p>
+
+<button (click)="refreshData()">Refresh Data</button>
+
+<table class='table' *ngIf="datas">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Temp. (C)</th>
+            <th>Humid. (%)</th>
+            <th>Light</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let node of datas">
+            <td>{{ node.tanggal }}</td>
+            <td>{{ node.temp }}</td>
+            <td>{{ node.humid }}</td>
+            <td>{{ node.light }}</td>
+        </tr>
+    </tbody>
+</table>
