@@ -9,7 +9,9 @@ import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { MonitoringComponent } from './components/monitoring/monitoring.component';
 import { LoginComponent } from './components/login/login.component';
-
+import { LoginFrameComponent } from './components/login/loginframe.component';
+import { MasterUserComponent } from './components/listuser/masteruser.component';
+import { ListUserComponent } from './components/listuser/listuser.component';
 @NgModule({
     bootstrap: [AppComponent],
     declarations: [
@@ -19,6 +21,9 @@ import { LoginComponent } from './components/login/login.component';
         FetchDataComponent,
         MonitoringComponent,
         LoginComponent,
+        LoginFrameComponent,
+        MasterUserComponent,
+        ListUserComponent,
         HomeComponent
     ],
     imports: [
@@ -31,7 +36,8 @@ import { LoginComponent } from './components/login/login.component';
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
             { path: 'monitoring', component: MonitoringComponent },
-            { path: 'login', component: LoginComponent },
+            { path: 'loginframe', component: LoginFrameComponent },
+             { path: 'masteruser', component: MasterUserComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]

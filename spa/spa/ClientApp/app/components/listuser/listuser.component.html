@@ -1,0 +1,20 @@
+<p *ngIf="!datas"><em>Loading...</em></p>
+
+<table class='table' *ngIf="datas">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Age</th>
+            <th>Weight</th>
+            <th>Height</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let node of datas">
+            <td>{{ node.nama }}</td>
+            <td>{{ node.age }}</td>
+            <td>{{ node.weight }}</td>
+            <td>{{ node.height }}</td>
+        </tr>
+    </tbody>
+</table>
